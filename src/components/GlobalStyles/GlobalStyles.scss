@@ -1,0 +1,33 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+/*
+Mục đích của việc thiết lập font-size thành 62.5% và sử dụng font-size là 1.6rem trong thẻ body trong một dự án web là tạo ra một hệ thống đơn giản và dễ quản lý cho việc quản lý kích thước font chữ trên trang web. Cụ thể:
+
+1. Dễ dàng chuyển đổi từ px sang rem: Bằng cách đặt font-size của thẻ body thành 62.5%, mỗi rem sẽ tương đương với 10px. Điều này làm cho việc chuyển đổi các giá trị kích thước font từ px sang rem trở nên đơn giản hơn, giúp làm cho mã nguồn dễ đọc và dễ quản lý hơn.
+
+2. Đảm bảo tính đáng tin cậy trên nhiều thiết bị: Sử dụng rem thay vì px có thể giúp đảm bảo rằng kích thước font sẽ tỷ lệ tương đối với font-size của phần tử gốc trên mọi thiết bị, giúp trang web hiển thị đồng đều và chính xác trên các thiết bị và màn hình khác nhau.
+
+3. Dễ quản lý và điều chỉnh: Bằng cách sử dụng rem và thiết lập font-size của phần tử gốc, bạn có thể dễ dàng điều chỉnh kích thước font cho toàn bộ trang web bằng cách chỉnh sửa một giá trị duy nhất.
+
+4. Tính linh hoạt trong thiết kế đáp ứng: Việc sử dụng rem có thể giúp thiết kế đáp ứng trở nên linh hoạt hơn, vì các giá trị rem tự động thích ứng với font-size của phần tử gốc, giúp trang web tự động điều chỉnh kích thước font tùy thuộc vào kích thước màn hình và thiết bị.
+*/
