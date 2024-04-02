@@ -1,0 +1,19 @@
+.menu-container {
+    margin-top: -8px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden auto;
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+.menu-wrapper {
+    font-size: 16px;
+    padding: 12px 0px 8px 0px;
+    min-width: 223px;
+    min-height: 200px;
+    list-style: none;
+}

@@ -1,0 +1,96 @@
+.wrapper {
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    min-height: 36px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 6px 18px;
+    user-select: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: 'TikTokFont';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    min-width: 100px;
+    text-decoration: none;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 3px;
+    background: var(--white);
+    color: rgba(22, 24, 35, 0.8);
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+//Button type:
+.primary {
+    color: var(--white);
+    background-color: rgb(254, 44, 85);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 16px;
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+    }
+}
+
+.outline {
+    color: rgba(254, 44, 85, 1);
+    background-color: rgba(254, 44, 85, 0);
+    border-color: rgba(254, 44, 85, 1);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.menu {
+    border: none;
+}
+
+//Button size
+.small {
+    min-width: 96px;
+    padding: 0px 15px;
+}
+
+.large {
+    min-width: 140px;
+    padding: 14px 16px;
+}
+
+//Button icon
+.iconClasses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16px;
+    width: 16px;
+    margin-right: 12px;
+    color: rgba(22, 24, 35, 0.8);
+}
+
+.iconClassesBig {
+    height: 20px;
+    width: 20px;
+    padding-right: 6px;
+}
+
+.customIcon {
+    padding-right: 6px;
+}
+
+//Button weight
+.btnSmallWeight {
+    font-weight: 500;
+}
+
+//Button border
+.borderTop {
+    border-top: 2px solid rgba(22, 24, 35, 0.12);
+}

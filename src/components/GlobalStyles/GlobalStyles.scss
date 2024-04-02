@@ -1,12 +1,18 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-
+    --black: #000;
+    --white: #fff;
+    --text-color: #333;
 }
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+
+    // Default layout cách add css: (var(<tên>, <giá trị mặc định>)
 }
 
 html {
@@ -14,10 +20,66 @@ html {
 }
 
 body {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "TikTokFont";
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
+}
+
+button, input, [tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[herf] {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+//Fonts embeded.
+@font-face {
+    font-family: TikTokFont;
+    src: url('/assets/fonts/TikTokFont-Regular.woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: TikTokFont;
+    src: url('/assets/fonts/TikTokFont-Semibold.woff2');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: TikTokFont;
+    src: url('/assets/fonts/TikTokDisplayFont-Bold.woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: TikTokFont;
+    src: url('/assets/fonts/TikTokFont-Bold.woff2');
+    font-weight: 800;
+}
+
+//css cho content của tippy.
+.tippy-box {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;  
+    padding: 4px;
+    background-color: rgba(84, 84, 84, 0.92);
+}
+
+.tippy-content {    
+    color: rgb(255, 255, 255);
+}
+
+.tippy-arrow {
+    color: rgba(84, 84, 84, 0.92);
 }
 
 /*

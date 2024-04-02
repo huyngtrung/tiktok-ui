@@ -1,0 +1,192 @@
+//main color
+
+.wrapper {
+    --search-height: 46px;
+    --search-top-spacer: 8px;
+
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
+}
+
+.inner {
+    height: 100%;
+    width: 100%;
+    padding: 12px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.search, 
+.search-result {
+    width: 500px;
+}
+
+.search {
+    position: relative;
+    height: var(--search-height); 
+    padding-left:  16px;
+    margin: 0px;
+    background: rgba(22, 24, 35, 0.06);
+    border-radius: 92px;
+    display: flex;
+    align-items: center;
+    border: 1.5px solid transparent;//Để khi active focus-within không bị co lại.
+
+    input {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        padding: 12px 0px;
+        border: none;
+        background: transparent;//màu trong suốt.
+        padding: 0px;
+        width: 100%;
+        height: 100%;//dễ tương tác hơn.
+        color: var(--black);
+        caret-color: rgb(254, 44, 85);
+        appearance: textfield; 
+        flex: 1; 
+    }
+
+    input:not(:placeholder-shown) {
+        .search-btn {
+            background: rgba(22, 24, 35, 0.06);
+            color: rgba(22, 24, 35, 1);
+        }
+    }
+    input:not(:placeholder-shown)~ .search-btn {
+        background: rgba(22, 24, 35, 0.06);
+        color: rgba(22, 24, 35, 1);
+    }
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: calc(var(--search-top-spacer));
+        right: 52px;
+        width: 1px;
+        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
+        background: rgba(22, 24, 35, 0.08);
+    }
+
+    &:focus-within {//Khi thẻ input bên trong thẻ có class search được focus thì acitve selector này.
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+}
+
+.search-result {
+}
+
+.menu-wrapper {
+    height: 100px;
+    height: 100px;
+}
+
+.search-tittle {
+    padding: 5px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
+}
+
+.clear,
+.loading {
+    position: absolute;
+    font-size: 14px;
+    right: 52px;
+    top: 50%;
+    transform: translateY(-40%);
+    color: rgba(22, 24, 35, 0.34);
+    margin: 0px 12px;
+}
+
+.search-btn {
+    width: 52px;
+    height: 100%;
+    padding: 11px 16px 11px 12px;
+    background: transparent;
+    border-top-right-radius: 92px;
+    border-bottom-right-radius: 92px;
+    font-size: 22px;
+    color: rgba(22, 24, 35, 0.3);
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.06);
+        color: rgba(22, 24, 35, 1);
+    }
+
+    &:active {
+        background: rgba(22, 24, 35, 0.06);
+        color: rgba(22, 24, 35, 1);
+    }
+}
+
+.action {
+    display: flex;
+}
+
+.action-menu{
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 0px 16px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.action-menu-icon{
+    width: 22px;
+    height: 22px;
+}
+
+.action-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin: 0px 14px;
+}
+
+.action-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: var(--white);
+    margin: 0px 14px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.action-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animation for icon */
+.action-menu-icon {
+    transition: transform 0.4s ease-in-out;
+}
+  
+.action-menu:hover .action-menu-icon {
+    transform: rotate(90deg); /* Or any transformation you prefer */
+}
+
+
+  
+
+  
