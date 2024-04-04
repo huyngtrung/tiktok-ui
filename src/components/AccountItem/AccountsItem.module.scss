@@ -3,6 +3,8 @@
     align-items: center;
     padding: 6px 16px;
     cursor: pointer;
+    text-decoration: none;
+    color: var(--black);
 
     &:hover {
         background-color: rgba(22, 24, 35, 0.03);
@@ -14,6 +16,7 @@
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    margin-right: 12px;
 }
 
 .info {
@@ -32,5 +35,5 @@
 
 .usename {
     font-size: 14px;
-    color: rgb(32, 213, 236);
+    color: rgba(22, 24, 35, 0.5);
 }

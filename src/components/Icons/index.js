@@ -148,7 +148,7 @@ export const LiveIcon = ({ width = '3rem', height = '3rem', className }) => (
 
 export const LiveHubIcon = ({ width = '3rem', height = '3rem', className }) => (
     <svg 
-        class={className} 
+        className={className} 
         width={width} 
         data-e2e="" 
         height={height} 
