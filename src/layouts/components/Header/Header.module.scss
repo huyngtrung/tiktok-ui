@@ -3,9 +3,16 @@
 .wrapper {
     --search-height: 46px;
     --search-top-spacer: 8px;
-
+    
+    width: 100%;
+    height: 100%;
     height: 60px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
+    background-color: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
 .inner {
@@ -15,6 +22,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
@@ -83,6 +96,7 @@
 .action-menu:hover .action-menu-icon {
     transform: rotate(90deg); /* Or any transformation you prefer */
 }
+
 
 
   

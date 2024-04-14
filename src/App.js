@@ -1,26 +1,27 @@
-import { Fragment } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Fragment } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //=> Đặt tên lại để mã dễ hiểu và tránh xung đột khi import
-import { publicRoutes } from "~/routes";
-import { DefaultLayout } from "~/components/Layout";
+import { publicRoutes } from '~/routes/routes';
+import DefaultLayout from '~/layouts';
 
 function App() {
     return (
         <Router>
-                <div className="App">
-                    <Routes>
-                        {publicRoutes.map((route, index) => {
-                            const Page = route.component;
+            <div className="App">
+                <Routes>
+                    {publicRoutes.map((route, index) => {
+                        const Page = route.component;
 
-                            let Layout = DefaultLayout;
+                        let Layout = DefaultLayout;
 
-                            if (route.layout) {
-                                Layout = route.layout;
-                            } else if (route.layout === null){
-                                Layout = Fragment;
-                            } 
+                        if (route.layout) {
+                            Layout = route.layout;
+                        } else if (route.layout === null) {
+                            Layout = Fragment;
+                        }
 
-                            return <Route 
+                        return (
+                            <Route
                                 key={index}
                                 path={route.path}
                                 element={
@@ -29,9 +30,10 @@ function App() {
                                     </Layout>
                                 }
                             />
-                        })}
-                    </Routes>
-                </div>
+                        );
+                    })}
+                </Routes>
+            </div>
         </Router>
     );
 }

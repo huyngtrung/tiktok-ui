@@ -1,21 +1,21 @@
-import classNames from "classnames/bind";
-import styles from "./Menu.module.scss"
-import Button from "~/components/Button";
+import classNames from 'classnames/bind';
+import styles from './Menu.module.scss';
+import Button from '~/components/Button/Button';
 
 function MenuItem({ data, onClick }) {
-    return ( 
+    return (
         <Button
             menu
             customIcon={data.customIcon}
-            btnIconBig={ data.icon } 
-            btnSmallWeight={ data.btnSmallWeight }
-            borderTop={ data.borderTop}
-            to={ data.to }
-            onClick={ onClick }
+            btnIconBig={data.icon}
+            btnSmallWeight={data.btnSmallWeight}
+            borderTop={data.borderTop}
+            to={data.to}
+            onClick={onClick}
         >
             {data.title}
         </Button>
-     );
+    );
 }
 
 export default MenuItem;

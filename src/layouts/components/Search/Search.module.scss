@@ -1,33 +1,34 @@
-.search, 
+.search,
 .search-result {
     width: 500px;
 }
 
 .search {
     position: relative;
-    height: var(--search-height); 
-    padding-left:  16px;
+    height: var(--search-height);
+    padding-left: 16px;
     margin: 0px;
     background: rgba(22, 24, 35, 0.06);
     border-radius: 92px;
     display: flex;
     align-items: center;
-    border: 1.5px solid transparent;//Để khi active focus-within không bị co lại.
+    border: 1.5px solid transparent; //Để khi active focus-within không bị co lại.
 
     input {
+        flex: 1;
+        font-family: var(--font-family);
         font-weight: 400;
         font-size: 16px;
         line-height: 21px;
-        padding: 12px 0px;
+        padding: 12px 40px 12px 0px;
         border: none;
-        background: transparent;//màu trong suốt.
-        padding: 0px;
+        background: transparent; //màu trong suốt.
         width: 100%;
-        height: 100%;//dễ tương tác hơn.
+        height: 100%; //dễ tương tác hơn.
         color: var(--black);
         caret-color: rgb(254, 44, 85);
-        appearance: textfield; 
-        flex: 1; 
+        appearance: textfield;
+        flex: 1;
     }
 
     input:not(:placeholder-shown) {
@@ -36,14 +37,13 @@
             color: rgba(22, 24, 35, 1);
         }
     }
-    input:not(:placeholder-shown)~ .search-btn {
+    input:not(:placeholder-shown) ~ .search-btn {
         background: rgba(22, 24, 35, 0.06);
         color: rgba(22, 24, 35, 1);
     }
 
-
     &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: calc(var(--search-top-spacer));
         right: 52px;
@@ -52,7 +52,8 @@
         background: rgba(22, 24, 35, 0.08);
     }
 
-    &:focus-within {//Khi thẻ input bên trong thẻ có class search được focus thì acitve selector này.
+    &:focus-within {
+        //Khi thẻ input bên trong thẻ có class search được focus thì acitve selector này.
         border-color: rgba(22, 24, 35, 0.2);
     }
 }
